@@ -13,7 +13,7 @@ python uniform_sampling -v < video_filename > -s < speedup_rate > -o < output_di
 | ` < speedup_rate > `        | Speed-up rate                       | _Integer_ | `20`                          |
 | ` < output_dir > `          | Path to save the output file.       | _String_  | `~/Data/MyVideos/out`         |
 
-## Prerequisites
+### Prerequisites ###
 
 The code runs in **Python 2.7**, with the libraries **tqdm and opencv**.
 
