@@ -4,7 +4,7 @@ This repository contains code to perform uniform sampling on a input video.
 To run it, just specify the following params:
 
 ```bash
-python uniform_sampling -v < video_filename > -s < speedup_rate > -o < output_dir >
+python uniform_sampling.py -v < video_filename > -s < speedup_rate > -o < output_dir >
 ```
 
 | Options                     | Description                         | Type      | Example                       |
