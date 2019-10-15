@@ -20,7 +20,6 @@ args = ap.parse_args(sys.argv[1:])
 if __name__ == '__main__':
 	input_video_pt = None
 	output_video_pt = None
-	counter = 0
 	try:
 		if args.speedup <= 0:
 			raise Exception('Speed-up rates should be greater than 0.')
@@ -31,19 +30,18 @@ if __name__ == '__main__':
 		# Video information
 		output_file = os.path.join(args.output_dir, os.path.basename(args.video).split('.')[0] + '_uniform.avi')
 		input_video_pt = cv2.VideoCapture(args.video)
-		width = int(input_video_pt.get(cv2.CAP_PROP_FRAME_WIDTH))
-		height = int(input_video_pt.get(cv2.CAP_PROP_FRAME_HEIGHT))
-		fps = int(round(input_video_pt.get(cv2.CAP_PROP_FPS)))
-		num_frames = int(input_video_pt.get(cv2.CAP_PROP_FRAME_COUNT))
-		fourcc = cv2.VideoWriter_fourcc(*'XVID')
-		#fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+		width = int(input_video_pt.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH))
+		height = int(input_video_pt.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))
+		fps = int(round(input_video_pt.get(cv2.cv.CV_CAP_PROP_FPS)))
+		num_frames = int(input_video_pt.get(cv2.cv.CV_CAP_PROP_FRAME_COUNT))
+		#fourcc = cv2.cv.CV_FOURCC(*'X264')
+		fourcc = cv2.cv.CV_FOURCC(*'MJPG')
+		
 		# Set current frame and write to output
 		output_video_pt = cv2.VideoWriter(output_file, fourcc, fps, (width, height))
-		ret = True
 		for i in tqdm.tqdm(xrange(0,num_frames,args.speedup)):
-			input_video_pt.set(cv2.CAP_PROP_POS_FRAMES, counter)
+			input_video_pt.set(cv2.cv.CV_CAP_PROP_POS_FRAMES, i)
 			ret, frame = input_video_pt.read()
-			counter += int(args.speedup)
 			if not ret:
 				break
 			output_video_pt.write(frame)
