@@ -18,7 +18,7 @@ python uniform_sampling.py -v < video_filename > -s < speedup_rate > -o < output
 The code runs in **Python 2.7**, with the libraries **tqdm and opencv**.
 
 * [tqdm](https://github.com/tqdm/tqdm) - A progress bar for Python CLI
-* [opencv](https://github.com/opencv/opencv) - Open Source Computer Vision Library (tested with version 4.0)
+* [opencv](https://github.com/opencv/opencv) - Open Source Computer Vision Library (tested with version 2.4.13.7)
 
 All of these libraries could be installed using [pip](https://pypi.python.org/pypi/pip) (Python Package Index).
 
