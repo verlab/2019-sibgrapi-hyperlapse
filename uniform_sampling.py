@@ -5,14 +5,14 @@
 This script performs the uniform video fast-forward.
 
 INPUT: 	v - input video
-		s - frame speedup 
+		s - frame speedup
 		o - output directory
 OUTPUT: Frames uniformelly sampled by s frames.
 '''
 import os, sys, argparse, cv2, tqdm
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-v", "--video", required=True, help="Video file")
+ap.add_argument("-i", "--input_video", required=True, help="Video file")
 ap.add_argument("-s", "--speedup", required=False, type=int, default=10, help="Speed-up rate")
 ap.add_argument("-o", "--output_dir", required=False, default=".", help="Output directory")
 args = ap.parse_args(sys.argv[1:])
@@ -21,22 +21,21 @@ if __name__ == '__main__':
 	input_video_pt = None
 	output_video_pt = None
 	try:
-		if args.speedup <= 0:
-			raise Exception('Speed-up rates should be greater than 0.')
-		if not os.path.isfile(args.video):
+		if args.speedup < 1:
+			raise Exception('Speed-up rates should be greater or equal than 1.')
+		if not os.path.isfile(args.input_video):
 			raise Exception('Input video file does not exist.')
 		if not os.path.isdir(args.output_dir):
 			raise Exception('Output directory does not exist or is inacessible.')
 		# Video information
-		output_file = os.path.join(args.output_dir, os.path.basename(args.video).split('.')[0] + '_uniform.avi')
-		input_video_pt = cv2.VideoCapture(args.video)
+		output_file = os.path.join(args.output_dir, '{}_uniform_{}x.avi'.format(os.path.basename(args.input_video).split('.')[0], args.speedup))
+		input_video_pt = cv2.VideoCapture(args.input_video)
 		width = int(input_video_pt.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH))
 		height = int(input_video_pt.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))
 		fps = int(round(input_video_pt.get(cv2.cv.CV_CAP_PROP_FPS)))
 		num_frames = int(input_video_pt.get(cv2.cv.CV_CAP_PROP_FRAME_COUNT))
 		#fourcc = cv2.cv.CV_FOURCC(*'X264')
 		fourcc = cv2.cv.CV_FOURCC(*'MJPG')
-		
 		# Set current frame and write to output
 		output_video_pt = cv2.VideoWriter(output_file, fourcc, fps, (width, height))
 		for i in tqdm.tqdm(xrange(0,num_frames,args.speedup)):
