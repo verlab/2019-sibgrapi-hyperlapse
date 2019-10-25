@@ -13,8 +13,8 @@ For each technique to be applied, a respective instruction can be found. All exa
 1. [Hecate](instructions/HECATE.md)
 2. [Uniform Sampling](instructions/uniform.md)
 3. [EgoSampling](instructions/EgoSampling.md)
-4. [Semantic Hyperlapse - ECCW](instructions/ECCW.md)
-5. [Semantic Hyperlapse - ICIP](instructions/ICIP.md)
+4. [Semantic Hyperlapse - ICIP](instructions/ICIP.md)
+5. [Semantic Hyperlapse - ECCW](instructions/ECCW.md)
 6. [Semantic Hyperlapse - JVCI](instructions/JVCI.md)
 7. [Semantic Hyperlapse - CVPR](instructions/CVPR.md)
 
