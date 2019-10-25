@@ -2,9 +2,13 @@
 
 This repository contains instructions to perform summarization, fast-forward and hyperlapse on egocentric videos.
 
-### Code ###
+### Code and video ###
 
-You can find the **Uniform sampling** code in the **src** folder.
+You can find the **Uniform sampling** code in the **src** folder. The example video can be downloaded using **wget**.
+
+```
+wget https://www.verlab.dcc.ufmg.br/repository/hyperlapse/data/video-example/example.mp4
+```
 
 ### Instructions  ###
 
