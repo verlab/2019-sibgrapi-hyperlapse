@@ -1,14 +1,14 @@
 # Sibgrapi 2019 Tutorial
 
-This repository contains code as well as instructions to perform summarization, fast-forward and hyperlapse on egocentric videos.
+This repository contains instructions to perform summarization, fast-forward and hyperlapse on egocentric videos.
 
 ### Code ###
 
-You can find the **Uniform sampling** code is in **src** folder.
+You can find the **Uniform sampling** code in the **src** folder.
 
 ### Instructions  ###
 
-For each technique to be applied, a respective instruction can be found. All examples were applied to our example file, with the **speed-up rate of 5x**.
+For each technique to be applied, a respective instruction can be found. All techniques were applied to our example file, with the **speed-up rate of 5x**.
 
 1. [Hecate](instructions/HECATE.md)
 2. [Uniform Sampling](instructions/uniform.md)
