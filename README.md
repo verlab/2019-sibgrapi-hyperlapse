@@ -1,30 +1,23 @@
-# Uniform Fast-Forward
+# Sibgrapi 2019 Tutorial
 
-This repository contains code to perform uniform sampling on a input video.
-To run it, just specify the following params:
+This repository contains code as well as instructions to perform summarization, fast-forward and hyperlapse on egocentric videos.
 
-```bash
-python uniform_sampling.py -v < video_filename > -s < speedup_rate > -o < output_dir >
-```
+### Code ###
 
-| Options                     | Description                         | Type      | Example                       |
-| --------------------------: | ----------------------------------- | --------- | ----------------------------- |
-| ` < video_filename > `      | Path and filename of the video.     | _String_  | `~/Data/MyVideos/myVideo.mp4` |
-| ` < speedup_rate > `        | Speed-up rate                       | _Integer_ | `20`                          |
-| ` < output_dir > `          | Path to save the output file.       | _String_  | `~/Data/MyVideos/out`         |
+You can find the **Uniform sampling** code is in **src** folder.
 
-### Prerequisites ###
+### Instructions  ###
 
-The code runs in **Python 2.7**, with the libraries **tqdm and opencv**.
+For each technique to be applied, a respective instruction can be found. All examples were applied to our example file, with the **speed-up rate of 5x**.
 
-* [tqdm](https://github.com/tqdm/tqdm) - A progress bar for Python CLI
-* [opencv](https://github.com/opencv/opencv) - Open Source Computer Vision Library (tested with version 2.4.13.7)
+1. [Hecate](instructions/HECATE.md)
+2. [Uniform Sampling](instructions/uniform.md)
+3. [EgoSampling](instructions/EgoSampling.md)
+4. [Semantic Hyperlapse - ECCW](instructions/ECCW.md)
+5. [Semantic Hyperlapse - ICIP](instructions/ICIP.md)
+6. [Semantic Hyperlapse - JVCI](instructions/JVCI.md)
+7. [Semantic Hyperlapse - CVPR](instructions/CVPR.md)
 
-All of these libraries could be installed using [pip](https://pypi.python.org/pypi/pip) (Python Package Index).
-
-```
-sudo -H pip install tqdm opencv
-```
 
 ### Institution ###
 
