@@ -4,7 +4,7 @@ This repository contains instructions to perform summarization, fast-forward and
 
 ### Code and video ###
 
-You can find the **Uniform sampling** code in the **src** folder. The example video can be downloaded using **wget**.
+**Uniform sampling** code, as well as the modified Poleg et al. 2014 Flow Estimator code to run in the Linux system, could be found in the **src** folder. The example video can be downloaded using **wget** as below:
 
 ```
 wget https://www.verlab.dcc.ufmg.br/repository/hyperlapse/data/video-example/example.mp4
