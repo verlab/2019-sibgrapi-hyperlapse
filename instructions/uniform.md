@@ -15,6 +15,6 @@ Download the python script and execute the code as following:
 ```
 $ git clone https://github.com/verlab/2019-sibgrapi-hyperlapse.git
 $ cd 2019-sibgrapi-hyperlapse
-$ python uniform_sampling.py -i /data/example.mp4  -o /data/output/uniform -s 10
+$ python uniform_sampling.py -i /data/example.mp4  -o /data/output/uniform -s 5
 ```
 where **-i** is the input video, **-o** is the output dir and **-s** is the speed-up rate.
