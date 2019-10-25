@@ -21,7 +21,7 @@ For each technique to be applied, a respective instruction can be found. All exa
 
 ### Institution ###
 
-Federal University of Minas Gerais (UFMG)  
+Universidade Federal de Minas Gerais (UFMG)  
 Computer Science Department  
 Belo Horizonte - Minas Gerais -Brazil 
 
