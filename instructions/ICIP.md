@@ -17,6 +17,9 @@ $ git clone https://github.com/verlab/SemanticFastForward_ICIP_2016.git
 Download the linux modified version of OpticalFlow extractor from Poleg's EgoSampling work. Compile it and extract the flow field.
 
 ```
+$ wget https://github.com/verlab/2019-sibgrapi-hyperlapse/blob/master/src/Vid2OpticalFlowCSV.tar.gz
+$ tar xvzf Vid2OpticalFlowCSV.tar.gz
+$ cd Vid2OpticalFlowCSV; make;
 $ ./optflow -v /data/example.mp4 -c default-config.xml
 ```
 
