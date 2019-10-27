@@ -11,7 +11,7 @@ Here we describe the steps to generate the hyperlapsed video using EgoSampling.
 Perform the steps:
 
 ```
-$ cd /codes/SemanticFastForward_ECCVW_2016
+$ cd /codes/SemanticFastForward_ECCVW_2016/_EgoSampling_Poleg_CVPR_2015
 $ cp Example_FF.m Poleg_Example_FF.m
 ```
 
