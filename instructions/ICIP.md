@@ -9,11 +9,14 @@ Here we describe the steps to generate the hyperlapsed version of a input video 
 
 ### Execution ###
 
+<sub>To further understand the method's parameters, check out the [original git repository README.md](https://github.com/verlab/SemanticFastForward_ICIP_2016.git).</sub>
+
 To download and build the executable, do the following steps:
 
 ```
 $ git clone https://github.com/verlab/SemanticFastForward_ICIP_2016.git
 ```
+
 Download the linux modified version of OpticalFlow extractor from Poleg's EgoSampling work. Compile it and extract the flow field.
 
 ```
@@ -29,7 +32,7 @@ Start Matlab and do:
 $ addpath('SemanticScripts');
 $ ExtractAndSave('/data/example.mp4');
 $ [~, non_semantic, semantic] = GetSemanticRanges('/data/example_face_extracted.mat');
-$ [semantic_speed, non_semantic_speed] = SpeedupOptimization(non_semantic, semantic, 5, 100, 15, 20, 0);
+$ [semantic_speed, non_semantic_speed] = SpeedupOptimization(non_semantic, semantic, 10, 100, 15, 20, 0);
 $ SpeedupVideo('/data', 'Example', semantic_speed, non_semantic_speed, [10,250], [50,3000], [0,100], [500,8], 'Speedup', 5);
 ```
 
