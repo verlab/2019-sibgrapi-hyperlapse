@@ -29,7 +29,7 @@ Start Matlab and do:
 $ addpath('SemanticScripts');
 $ ExtractAndSave('/data/example.mp4');
 $ [~, non_semantic, semantic] = GetSemanticRanges('/data/example_face_extracted.mat');
-$ [semantic_speed, non_semantic_speed] = SpeedupOptimization(non_semantic, semantic, 10, 100, 15, 20, 0);
+$ [semantic_speed, non_semantic_speed] = SpeedupOptimization(non_semantic, semantic, 5, 100, 15, 20, 0);
 $ SpeedupVideo('/data', 'Example', semantic_speed, non_semantic_speed, [10,250], [50,3000], [0,100], [500,8], 'Speedup', 5);
 ```
 
