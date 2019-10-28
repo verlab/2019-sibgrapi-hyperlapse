@@ -11,6 +11,8 @@ Here we describe the steps to generate the hyperlapsed version of a input video 
 
 ### Execution ###
 
+<sub>To further understand the method's parameters, check out the [original git repository README.md](https://github.com/verlab/SemanticFastForward_ECCVW_2016.git).</sub>
+
 To download and build the executable, do the following steps:
 
 ```
