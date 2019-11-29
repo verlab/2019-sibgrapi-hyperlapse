@@ -1,4 +1,5 @@
-# Sibgrapi 2019 Tutorial
+# Sibgrapi 2019 Tutorial T4
+## A Hands-on Tutorial on Fast Forwarding First-Person Videos
 
 This repository contains instructions to perform summarization, fast-forward and hyperlapse on egocentric videos.
 
